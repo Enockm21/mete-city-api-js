@@ -5,6 +5,7 @@
 npm i
 ```
 
+
 ## Usage
 
 ```shell
@@ -20,6 +21,7 @@ npm run server
 # Watches Sass for changes and starts a local server
 npm start
 ```
+
 
 ## Scripts
 
