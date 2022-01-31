@@ -5,8 +5,7 @@
 npm i
 ```
 
-
-## Usage
+## Usage
 
 ```shell
 # Compile Sass
@@ -21,7 +20,6 @@ npm run server
 # Watches Sass for changes and starts a local server
 npm start
 ```
-
 
 ## Scripts
 
