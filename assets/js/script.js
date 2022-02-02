@@ -1,3 +1,6 @@
+document.body.style.backgroundImage =
+  "url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80')";
+
 const search = document.getElementById("search");
 const searchSubmit = document.getElementById("submit");
 
@@ -62,16 +65,7 @@ search.addEventListener("input", function () {
       ).innerHTML = `<option value="${names.nom}">`;
     });
 });
-// if (navigator.geolocation) {
-//   //true
-//   console.log(navigator.location);
-// } else {
-//   //false
-//   alert("geolocation not available?! What browser is this?");
-//   // prompt for city?
-// }
-// let localisation = navigator.geolocation.getCurrentPosition(function (pos) {});
-// navigator.geolocation.getCurrentPosition(success, error, options);
+
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -82,7 +76,8 @@ function success(pos) {
   var crd = pos.coords;
 
   console.log("Your current position is:");
-  console.log(`Latitude : ${crd.latitude}`);
+  console.log(crd);
+  console.log(`Longitude: ${crd.longitude}`);
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);
 }
@@ -90,5 +85,3 @@ function success(pos) {
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
 }
-
-navigator.geolocation.getCurrentPosition(success, error, options);
